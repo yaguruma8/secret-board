@@ -1,10 +1,12 @@
+// HTTPサーバを起動する
 'use strict';
 
 const http = require('http');
+const router = require('./lib/router');
+
 const server = http
   .createServer((req, res) => {
-    res.write('Hello World!');
-    res.end();
+    router.route(req, res);
   })
   .on('error', (e) => {
     console.error('Server Error', e);

@@ -5,5 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "node test.js"
+  },
+  "dependencies": {
+    "pug": "2.0.4"
   }
 }
