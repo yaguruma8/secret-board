@@ -22,6 +22,6 @@ html(lang="ja")
       - var isDeletable = (user === post.postedBy)
       if isDeletable 
         form(action="/posts?delete=1", method="post") 
-          input(type="hidden" name="id" vallue=post.id)
+          input(type="hidden" name="id" value=post.id)
           button(type="submit") 削除
       hr
