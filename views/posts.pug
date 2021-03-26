@@ -23,6 +23,9 @@ html(lang="ja")
         h3 #{post.id} ID: #{post.trackingCookie}
       p #{post.content}
       p 投稿日時 #{post.createdAt}
+      - var isAdmin = (user === 'admin')
+      if isAdmin 
+        p 投稿者 #{post.postedBy}
       - var isDeletable = (user === post.postedBy)
       if isDeletable 
         form(action="/posts?delete=1", method="post") 
