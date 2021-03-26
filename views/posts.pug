@@ -26,7 +26,7 @@ html(lang="ja")
       - var isAdmin = (user === 'admin')
       if isAdmin 
         p 投稿者 #{post.postedBy}
-      - var isDeletable = (user === post.postedBy)
+      - var isDeletable = (user === post.postedBy || isAdmin)
       if isDeletable 
         form(action="/posts?delete=1", method="post") 
           input(type="hidden" name="id" value=post.id)
