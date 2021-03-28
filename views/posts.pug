@@ -43,6 +43,7 @@ html(lang="ja")
           if isDeletable 
             form(action="/posts?delete=1", method="post") 
               input(type="hidden" name="id" value=post.id)
+              input(type="hidden" name="oneTimeToken" value=oneTimeToken)
               button(type="submit").btn.btn-danger.float-right 削除
 
     //- jQuery
